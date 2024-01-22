@@ -5,13 +5,16 @@ import { Controller as TikTokController } from "./controller/tiktok-controller.j
 import { Controller as InstagramController } from "./controller/instagram-controller.js";
 
 const app = express()
-const port = 5001
+const port = 5000
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const tiktokController = new TikTokController()
 const instagramController = new InstagramController()
 
+app.get('/' , (req , res) => {
+    res.send('Yohoo this is API')
+})
 
 app.get('/tiktok/rebotou/service' , tiktokController.encryptedDomain)
 app.get('/tiktok/rebotou/dns', tiktokController.checkDomain)
