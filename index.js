@@ -12,10 +12,6 @@ app.use(bodyParser.json());
 const tiktokController = new TikTokController()
 const instagramController = new InstagramController()
 
-app.get('/' , (req , res) => {
-    res.send('Yohoo this is API')
-})
-
 app.get('/tiktok/rebotou/service' , tiktokController.encryptedDomain)
 app.get('/tiktok/rebotou/dns', tiktokController.checkDomain)
 app.get('/tiktok/rebotou/scripted', tiktokController.checkComments)
@@ -28,4 +24,4 @@ app.listen(port, () => {
     console.log(`Port active at ${port}`)
 })
 
-module.exports = app
+export default app
