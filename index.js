@@ -5,7 +5,7 @@ import { Controller as TikTokController } from "./controller/tiktok-controller.j
 import { Controller as InstagramController } from "./controller/instagram-controller.js";
 
 const app = express()
-const port = 3000
+const port = 5001
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -24,3 +24,5 @@ app.get('/instagram/pingaps/service' , instagramController.encryptedDomain)
 app.listen(port, () => {
     console.log(`Port active at ${port}`)
 })
+
+module.exports = app
