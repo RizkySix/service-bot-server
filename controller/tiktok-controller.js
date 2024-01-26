@@ -66,12 +66,17 @@ class Controller
               if(!item || item == "null" || item.length > 150 ){
                 res.send(false)
             }
-      
+            
+            let isGood = false
             for (const key in allowedDomain) {
-              if (item.includes(allowedDomain[key])) {
-                res.send(true)
-                return
+              if (item.indexOf(allowedDomain[key]) !== -1) {
+                isGood = true
+                break
               }
+            }
+
+            if(isGood){
+              res.send(true)
             }
             
             res.send(false)
