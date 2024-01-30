@@ -18,15 +18,11 @@ class Controller
         
         const responseValues = Object.values(Object.assign({}, item));
         const newValidDm = [] 
-      
+        let validDm = false
+          
         for(let prop in responseValues){
-          let validDm = false
-          for(let domProp in allowedDomain){
-            if(responseValues[prop].indexOf(allowedDomain[domProp]) !== -1){
-              validDm = true
-              break
-            }
-          }
+        
+          validDm = this.#utils.domainValidation(responseValues[prop])
       
           if(validDm){
               newValidDm.push(btoa(this.#utils.emojiToUnicode(responseValues[prop])));
