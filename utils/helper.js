@@ -16,7 +16,7 @@ class Utils {
     return encryptedObj;
   };
 
-  emojiToUnicode(input) {
+  emojiToUnicode = (input) => {
     return Array.from(input)
       .map((char) => char.codePointAt(0).toString(16))
       .join(" ");
@@ -28,7 +28,7 @@ class Utils {
    * @param {*} text 
    * @returns 
    */
-  extractURLs(text) {
+  extractURLs = (text) => {
     //poola regex untuk menemukan URL dalam teks
     const urlPattern = /(https?:\/\/\S+)/gi;
     //menggunakan ekspresi regx untuk menemukan URL dalam teks dan mengembalikan daftar URL yang cocok
@@ -41,7 +41,7 @@ class Utils {
    * @param {*} domain 
    * @returns 
    */
-  isValidURL(url, domain) {
+  isValidURL = (url, domain) => {
     let status = false;
 
     domain.forEach((dom) => {
@@ -51,7 +51,7 @@ class Utils {
         "i"
       );
 
-      // Menggunakan metode test() untuk memeriksa apakah URL cocok dengan pola reguler
+      //Menggunakan metode test() untuk memeriksa apakah URL cocok dengan pola regex
       status = domainPattern.test(url);
     });
 
@@ -81,7 +81,7 @@ class Utils {
       });
     });
 
-    // Memeriksa yang valid dengan continous loop urls
+    //Memeriksa yang valid dengan continous loop urls
     let status = false;
 
     urls.forEach(url => {
