@@ -4,6 +4,7 @@
     "<hallobali>" : "https://hallobali.id/",
     "<sarungindonesia>" : "https://sarungindonesia.co.id/",
     "<behati>" : "https://behatiskinclinic.co.id/",
+    "<marketbiz>" : "https://marketbiz.net/",
 }
 
 const allowedMainDomain = {
@@ -12,6 +13,7 @@ const allowedMainDomain = {
     "<hallobali>" : "hallobali.id",
     "<sarungindonesia>" : "sarungindonesia.co.id",
     "<behati>" : "behatiskinclinic.co.id",
+    "<marketbiz>" : "marketbiz.net",
 }
 
 export { allowedDomain, allowedMainDomain}
