@@ -6,6 +6,7 @@
     "<behati>" : "https://behatiskinclinic.co.id/",
     "<marketbiz>" : "https://marketbiz.net/",
     "<daruratmilyarder>" : "https://daruratmilyader.com/",
+    "<ipaymu>" : "https://ipaymu.com/",
 }
 
 const allowedMainDomain = {
@@ -16,6 +17,7 @@ const allowedMainDomain = {
     "<behati>" : "behatiskinclinic.co.id",
     "<marketbiz>" : "marketbiz.net",
     "<daruratmilyarder>" : "daruratmilyader.com",
+    "<ipaymu>" : "ipaymu.com",
 }
 
 export { allowedDomain, allowedMainDomain}
